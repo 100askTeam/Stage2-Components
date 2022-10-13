@@ -1,0 +1,17 @@
+{
+	"DONGSHANPI": {
+		/* Target Device Settings */
+		"TARGET_IP":"192.168.5.9",
+
+		/* Project Settings */
+		"PROGRAM":"hello.bin",
+
+		"ARCH":"arm-buildroot-linux-gnueabihf",
+		"SDKTARGETSYSROOT": "/home/book/100ask_imx6ull-sdk/ToolChain/arm-buildroot-linux-gnueabihf_sdk-buildroot/arm-buildroot-linux-gnueabihf/sysroot/",
+
+		/* Yocto SDK Constants */
+		"CC_PREFIX": "/home/book/100ask_imx6ull-sdk/ToolChain/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/arm-buildroot-linux-gnueabihf-",
+		"CXX": "${config:DONGSHANPI.CC_PREFIX}g++ --sysroot=${config:DONGSHANPI.SDKTARGETSYSROOT}",
+		"CC": "${config:DONGSHANPI.CC_PREFIX}gcc --sysroot=${config:DONGSHANPI.SDKTARGETSYSROOT}",
+	}
+}

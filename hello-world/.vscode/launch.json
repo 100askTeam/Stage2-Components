@@ -1,0 +1,24 @@
+{
+    "version": "0.2.0",
+    "configurations": [{
+        "name": "GDB debug",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${config:DONGSHANPI.PROGRAM}",
+        "args": [],
+        "stopAtEntry": true,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "console": "integratedTerminal",
+        "MIMode": "gdb",
+        "targetArchitecture": "arm",
+        "preLaunchTask": "var-deploy-gdb",
+        "setupCommands": [{
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+        }],
+        "miDebuggerPath": "/home/book/100ask_imx6ull-sdk/ToolChain/arm-buildroot-linux-gnueabihf_sdk-buildroot/bin/arm-buildroot-linux-gnueabihf-gdb",
+        "miDebuggerServerAddress": "${config:DONGSHANPI.TARGET_IP}:1234",
+    }]
+}
